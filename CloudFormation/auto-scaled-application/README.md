@@ -5,4 +5,4 @@
 ### 課題
 * ec2-role-2.templateのロールがフルアクセス設定でよくない。
 * ec2-role-2.templateの定義内容を理解してないorz
-* eauto-scaled-application.templateの定義内容を理解してないorz
+* auto-scaled-application.templateの定義内容を理解してないorz
