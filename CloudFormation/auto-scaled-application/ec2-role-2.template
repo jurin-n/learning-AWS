@@ -1,0 +1,33 @@
+{
+   "AWSTemplateFormatVersion": "2010-09-09",
+   "Resources": {
+      "Ec2Role02": {
+         "Type": "AWS::IAM::Role",
+         "Properties": {
+            "RoleName":"ec2-role-2",
+            "AssumeRolePolicyDocument": {
+               "Version" : "2012-10-17",
+               "Statement": [ {
+                  "Effect": "Allow",
+                  "Principal": {
+                     "Service": [ "ec2.amazonaws.com" ]
+                  },
+                  "Action": [ "sts:AssumeRole" ]
+               } ]
+            },
+            "Path":"/",
+            "Policies": [ {
+               "PolicyName": "root",
+               "PolicyDocument": {
+                  "Version" : "2012-10-17",
+                  "Statement": [ {
+                     "Effect": "Allow",
+                     "Action": "*",
+                     "Resource": "*"
+                  } ]
+               }
+               } ]
+            }
+         }
+      }
+}
